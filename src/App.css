@@ -1,0 +1,80 @@
+.Side {
+  position: fixed;
+  width: 240px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgb(29, 35, 39);
+}
+
+.Main {
+  height: 100vh;
+  margin-inline-start: 240px;
+}
+
+.Note-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: none;
+  background: inherit;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.Note-button:hover {
+  background: rgb(60, 60, 60);
+  
+}
+.Form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.Note-editable {
+  width: 100%;
+  border: none;
+  padding: 16px;
+  background: transparent;
+  color: inherit;
+}
+
+.Note-editable:focus-visible {
+  outline: 0;
+  box-shadow: inset 0px 0px 0px 2px white;
+}
+
+.Note-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Note-content {
+  flex-grow: 1;
+  resize: none;
+  font-family: inherit;
+}
+
+.Note-actions {
+  font-size: 14px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.Button {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 35, 39);
+  border: none;
+  color: inherit;
+}
