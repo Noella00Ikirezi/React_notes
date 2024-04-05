@@ -1,195 +1,40 @@
 {
   "notes": [
     {
-      "id": "c46e",
-      "title": "React.jdcfvvvvddcdd",
-      "content": "This is the first note i created on my appp\ngghcvcd",
-      "lastUpdatedAt": "2024-03-21T17:42:45.583Z",
-      "dateOfLastUpdate": "2024-04-05T15:53:08.974Z"
+      "id": "3178",
+      "title": "Bienvenue dans Simplenote",
+      "content": "Simplenote est un outil facile pour prendre des notes, créer des listes de choses à faire, capturer des idées, etc. Il vous suffit de l’ouvrir, d’entrer vos réflexions, et le tour est joué. Simplenote assurant gratuitement la synchronisation sur tous vos appareils, vous disposez de vos notes à tout moment.",
+      "dateOfLastUpdate": "2024-04-05T17:27:38.701Z"
     },
     {
-      "id": "c76b",
-      "title": "Carla",
-      "content": "This post was created by carlad",
-      "lastUpdatedAt": "2024-03-21T17:42:46.275Z",
-      "dateOfLastUpdate": "2024-04-05T14:54:05.388Z"
+      "id": "ec8b",
+      "title": "Markdown",
+      "content": "Utilisez Markdown pour ajouter des éléments de style à vos notes. Sélectionnez « Markdown » dans les options de note pour activer Markdown sur cette note. Pour en savoir plus sur l’utilisation de Markdown, consultez https://simplenote.com/help/#markdown.",
+      "dateOfLastUpdate": "2024-04-05T17:29:21.586Z"
     },
     {
-      "id": "23be",
-      "title": "hello",
-      "content": "ferbfgryfirihfçr\"",
-      "lastUpdatedAt": "2024-04-04T12:43:25.902Z"
+      "id": "641f",
+      "title": "Notes épinglées",
+      "content": "Vous consultez régulièrement des notes importantes ? Épinglez ces notes en haut de votre liste pour y accéder plus facilement.",
+      "dateOfLastUpdate": "2024-04-05T17:29:03.658Z"
     },
     {
-      "id": "adb2",
-      "title": "",
-      "content": ""
+      "id": "492b",
+      "title": "Tags",
+      "content": "Ajoutez des tags à vos notes pour les organiser. Les tags fonctionnent à peu près de la même manière que les dossiers, à l’exception que vous pouvez ajouter autant de tags que vous le souhaitez à une note.",
+      "dateOfLastUpdate": "2024-04-05T17:29:41.351Z"
     },
     {
-      "id": "920a",
-      "title": "",
-      "content": ""
+      "id": "c334",
+      "title": "Liens internes",
+      "content": "Faites référence à une note dans une autre. Sélectionnez « Copier le lien interne » dans les options de note ou tapez « [ » suivi du titre de la note à lier. Pour en savoir plus sur les liens internes, consultez https://simplenote.com/help/#internal-links.",
+      "dateOfLastUpdate": "2024-04-05T17:30:01.447Z"
     },
     {
-      "id": "d059",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "7518",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "65a1",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "7d27",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "eeaa",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "29b6",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "5e22",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "4498",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "e612",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "669d",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "38ba",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "99dc",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "e66e",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "496b",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "09cf",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "aa8f",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "e77f",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "b7b2",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "b829",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "5bfb",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "0d98",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "365e",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "8b69",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "99c3",
-      "title": "",
-      "content": ""
-    },
-    {
-      "id": "3279",
-      "title": "New Note",
-      "content": "Note content"
-    },
-    {
-      "id": "62fb",
-      "title": "New Note",
-      "content": "",
-      "dateOfLastUpdate": "2024-04-05T15:10:20.986Z"
-    },
-    {
-      "id": "987b",
-      "title": "New Note",
-      "content": "",
-      "dateOfLastUpdate": "2024-04-05T15:10:22.730Z"
-    },
-    {
-      "id": "d98e",
-      "title": "New Note",
-      "content": "",
-      "dateOfLastUpdate": "2024-04-05T15:10:22.914Z"
-    },
-    {
-      "id": "8793",
-      "title": "New Note",
-      "content": "",
-      "dateOfLastUpdate": "2024-04-05T15:10:23.081Z"
-    },
-    {
-      "id": "1e9f",
-      "title": "New Note",
-      "content": "",
-      "dateOfLastUpdate": "2024-04-05T15:10:23.898Z"
-    },
-    {
-      "id": "2f78",
-      "title": "New Note",
-      "content": "",
-      "dateOfLastUpdate": "2024-04-05T15:10:24.046Z"
+      "id": "d4cc",
+      "title": "Synchronisation",
+      "content": "Il n’y a pas de bouton « Enregistrer », car toutes vos modifications sont automatiquement synchronisées et accessibles depuis n’importe quelle plateforme. Pour en savoir plus sur la synchronisation, consultez https://simplenote.com/help/#syncing.",
+      "dateOfLastUpdate": "2024-04-05T17:30:23.763Z"
     }
   ]
 }

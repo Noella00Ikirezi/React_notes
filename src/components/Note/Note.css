@@ -43,3 +43,19 @@ textarea#content {
   border-radius: 4px;
   resize: none; /* Disable resizing of the textarea */
 }
+
+.save-note-btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  width: 60px;
+  margin-top: 10px; /* Adjust the margin as needed */
+  border: none;
+  background-color: #3b4d67; /* Same background color as delete button */
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.save-note-btn:hover {
+  background-color: #506784; /* Darker shade on hover, like the delete button */
+}

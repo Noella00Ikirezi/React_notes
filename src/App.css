@@ -1,52 +1,64 @@
 .app-sidebar {
   width: 35%;
-  height: 100vh; /* Full height of the viewport */
-  overflow-y: auto; /* Enables scrolling on the y-axis */
+  height: 100vh;
+  overflow-y: auto;
   background-color: #2c3e50;
   color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .app {
   display: flex;
-  height: 100vh; /* Full height of the viewport */
-  overflow: hidden; /* Prevents scrolling on the app level */
+  height: 100vh;
+  overflow: hidden;
 }
-
-/* Remaining styles */
 
 .app-sidebar-header {
   padding: 20px;
   background-color: #1a2533;
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Distributes extra space evenly */
 }
 
 .add-note-btn, .clear-search-btn, .delete-note-btn {
-  /* Shared button styles */
   cursor: pointer;
-  padding: 5px 10px;
-  margin-left: 10px;
+  padding: 10px 15px;
+  margin: 0 5px;
   border: none;
-  background-color: #3b4d67;
+  background-color: #34495e;
   color: white;
   border-radius: 4px;
+  transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 .add-note-btn:hover, .clear-search-btn:hover, .delete-note-btn:hover {
-  /* Hover state for buttons */
-  background-color: #506784;
+  background-color: #4e6a85;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
 }
 
 .search-bar input[type="text"] {
-  width: calc(100% - 80px);
-  padding: 5px;
-  margin-right: 10px;
+  flex-grow: 1; /* Takes up the remaining space */
+  padding: 10px;
+  margin: 0 10px;
   border-radius: 4px;
   border: none;
+  background-color: #1a2533;
+  color: #fff;
 }
 
 .note-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px;
   border-bottom: 1px solid #3b4d67;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .note-preview:hover {
@@ -57,16 +69,66 @@
   background-color: #425a75;
 }
 
+.note-details {
+  flex-grow: 1; /* Ensure details take up the available space */
+  overflow: hidden; /* Hide overflow in the details container */
+}
+
+.note-title {
+  font-weight: bold;
+  color: #ecf0f1;
+  display: block; /* Make title its own line */
+}
+
+.note-date {
+  color: #bbb;
+  font-size: 0.85rem;
+  display: block; /* Make date its own line */
+}
+
+.note-content {
+  color: #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block; /* Make content its own line */
+}
+
+.delete-note-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.delete-note-btn:hover {
+  background-color: #c0392b;
+}
+
+.note-preview strong {
+  font-size: 1rem;
+  margin-right: auto; 
+  color: #ecf0f1;
+}
+
+.note-preview time {
+  font-size: 0.85rem;
+  color: #bdc3c7;
+  margin-right: 15px;
+}
+
 .note-display {
   flex-grow: 1;
-  background-color: #f4f4f4; /* Lighter background for the selected note */
+  background-color: #f4f4f4;
   padding: 20px;
+  overflow-y: auto; /* Enable scroll on note display if content is long */
 }
 
 .note-display .no-active-note {
-  color: #ccc;
+  color: #bdc3c7;
   text-align: center;
   margin-top: 50px;
+  font-size: 1.5rem;
 }
-
-/* If you have additional specific styles for the .note class, add them here */
