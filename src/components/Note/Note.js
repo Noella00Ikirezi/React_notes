@@ -3,15 +3,15 @@ import './Note.css';
 import debounce from 'lodash.debounce';
 
 const Note = ({ activeNote, updateNote }) => {
-  // Local state to manage input changes
+ 
   const [note, setNote] = useState(activeNote);
 
-  // Update local state whenever the activeNote changes
+  
   useEffect(() => {
     setNote(activeNote);
   }, [activeNote]);
 
-  // Debounced update function
+  
   const debouncedUpdateNote = debounce(updateNote, 2000);
 
   const onEditField = (field, value) => {
@@ -20,7 +20,7 @@ const Note = ({ activeNote, updateNote }) => {
     debouncedUpdateNote(updatedNote);
   };
 
-  // Handle manual save - if you decide to keep a save button
+
   const onSaveNote = () => {
     updateNote(note);
   };

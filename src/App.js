@@ -37,9 +37,9 @@ const App = () => {
     updateNote(note);
   }, 2000), []);
 
-  // To ensure this effect runs only when `debouncedSave` or `activeNote` changes.
+ 
   useEffect(() => {
-    if (activeNote?.id) { // Make sure activeNote is selected and has an ID.
+    if (activeNote?.id) { 
       debouncedSave(activeNote);
     }
   }, [activeNote, debouncedSave]);
@@ -128,7 +128,7 @@ const App = () => {
 
       setNotes(notes.filter(note => note.id !== idToDelete));
       if (activeNote?.id === idToDelete) {
-        setActiveNote(null); // Clear the active note if it was deleted.
+        setActiveNote(null); 
       }
     } catch (error) {
       console.error('Error:', error);
@@ -143,9 +143,9 @@ const App = () => {
       note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       note.content.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    // Important to handle the case where active note might be filtered out
+    
     if (!filtered.find(note => note.id === activeNote?.id)) {
-      setActiveNote(null); // If the active note is not in the filtered list, clear it.
+      setActiveNote(null); 
     }
   }, [notes, searchTerm, activeNote?.id]);
 
