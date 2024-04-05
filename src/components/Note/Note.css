@@ -1,0 +1,45 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height of the viewport */
+  overflow-y: auto; /* Enable scrolling if content is taller than the screen */
+  background-color: #f7f7f7; /* Slightly lighter background */
+  padding: 20px; /* Padding around the content */
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.note-header input[type="text"] {
+  flex: 1; /* Input field takes up available space */
+  font-size: 24px; /* Larger font size for the title */
+  padding: 10px;
+  margin-right: 10px; /* Space between the input field and the button */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.note-header button {
+  padding: 10px 20px;
+  background-color: #ff6347; /* A color that stands out for the delete button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.note-header button:hover {
+  background-color: #ff4943; /* Slightly darker on hover */
+}
+
+textarea#content {
+  flex: 1; /* Textarea takes up the rest of the space */
+  font-size: 16px; /* Comfortable reading font size */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none; /* Disable resizing of the textarea */
+}

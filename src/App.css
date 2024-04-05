@@ -1,80 +1,72 @@
-.Side {
-  position: fixed;
-  width: 240px;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  background-color: rgb(29, 35, 39);
+.app-sidebar {
+  width: 35%;
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto; /* Enables scrolling on the y-axis */
+  background-color: #2c3e50;
+  color: #fff;
 }
 
-.Main {
-  height: 100vh;
-  margin-inline-start: 240px;
-}
-
-.Note-button {
-  display: block;
-  width: 100%;
-  padding: 12px;
+.app {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents scrolling on the app level */
+}
+
+/* Remaining styles */
+
+.app-sidebar-header {
+  padding: 20px;
+  background-color: #1a2533;
+}
+
+.add-note-btn, .clear-search-btn, .delete-note-btn {
+  /* Shared button styles */
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: 10px;
   border: none;
-  background: inherit;
+  background-color: #3b4d67;
   color: white;
-  font-weight: bold;
+  border-radius: 4px;
+}
+
+.add-note-btn:hover, .clear-search-btn:hover, .delete-note-btn:hover {
+  /* Hover state for buttons */
+  background-color: #506784;
+}
+
+.search-bar input[type="text"] {
+  width: calc(100% - 80px);
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.note-preview {
+  padding: 15px;
+  border-bottom: 1px solid #3b4d67;
+  cursor: pointer;
+}
+
+.note-preview:hover {
+  background-color: #334457;
+}
+
+.note-preview.active {
+  background-color: #425a75;
+}
+
+.note-display {
+  flex-grow: 1;
+  background-color: #f4f4f4; /* Lighter background for the selected note */
   padding: 20px;
 }
 
-.Note-button:hover {
-  background: rgb(60, 60, 60);
-  
-}
-.Form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+.note-display .no-active-note {
+  color: #ccc;
+  text-align: center;
+  margin-top: 50px;
 }
 
-.Note-editable {
-  width: 100%;
-  border: none;
-  padding: 16px;
-  background: transparent;
-  color: inherit;
-}
-
-.Note-editable:focus-visible {
-  outline: 0;
-  box-shadow: inset 0px 0px 0px 2px white;
-}
-
-.Note-title {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.Note-content {
-  flex-grow: 1;
-  resize: none;
-  font-family: inherit;
-}
-
-.Note-actions {
-  font-size: 14px;
-  padding: 16px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.Button {
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(29, 35, 39);
-  border: none;
-  color: inherit;
-}
+/* If you have additional specific styles for the .note class, add them here */
