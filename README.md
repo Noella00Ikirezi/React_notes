@@ -42,7 +42,7 @@ Make sure you have Node.js and npm installed on your machine.
 1. Start the JSON server:
 
     ```bash
-    npm run json-server
+    npx json-server --port 4000 db.json
     ```
 
     This command will start the JSON server which provides the backend for managing notes. It serves the `db.json` file containing the notes data.
