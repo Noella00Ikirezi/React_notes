@@ -3,6 +3,9 @@ import './App.css';
 import Note from './components/Note/Note';
 import Loader from './components/Loader/Loader';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbtack } from '@fortawesome/free-solid-svg-icons';
+
 
 const App = () => {
   const [notes, setNotes] = useState([]);
@@ -53,6 +56,36 @@ const App = () => {
       setLoading(false);
     }
   };
+
+const togglePin = async (id) => {
+  const noteToPin = notes.find((note) => note.id === id);
+  const updatedNote = { ...noteToPin, isPinned: !noteToPin.isPinned };
+  
+  try {
+    const response = await fetch(`http://localhost:4000/notes/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedNote),
+    });
+    if (!response.ok) throw new Error('Could not update the note pin status.');
+
+    let updatedNotes = notes.map((note) => 
+      note.id === updatedNote.id ? updatedNote : note
+    );
+    
+    updatedNotes = updatedNotes.sort((a, b) => {
+      if (a.isPinned && !b.isPinned) return -1;
+      if (!a.isPinned && b.isPinned) return 1;
+      return 0;
+    });
+
+    setNotes(updatedNotes);
+  } catch (error) {
+    setError(error.toString());
+  }
+};
 
 
 
@@ -128,60 +161,64 @@ const App = () => {
 
   return (
     <div className="app">
+  
 
+  <aside className="app-sidebar">
+     <h1>Notes</h1>
+    <header className="app-sidebar-header">
+     
+      
+      <div className="search-bar">
+        <input type="text" value={searchTerm} onChange={onSearch} placeholder="Search notes" />
+        {searchTerm && <button className="clear-search-btn" onClick={clearSearch}>X</button>}
+      </div>
 
-      <aside className="app-sidebar">
-          <h1>Notes</h1>
-        <header className="app-sidebar-header">
-          
+      <button className="add-note-btn" onClick={onAddNote}>+ Créer une note</button>
+    </header>
 
-          <button className="add-note-btn" onClick={onAddNote}>+ Créer une note</button>
+    
 
-          <div className="search-bar">
-
-            <input type="text" value={searchTerm} onChange={onSearch} placeholder="Search notes" />
-            {searchTerm && <button className="clear-search-btn" onClick={clearSearch}>X</button>}
+    <div className="app-sidebar-notes">
+      {filteredNotes.map((note) => (
+        <div key={note.id} 
+             className={`note-preview ${note.id === activeNote?.id ? 'active' : ''}`} 
+             onClick={() => setActiveNote(note)}>
+          <div className="note-details">
+            <strong className="note-title">
+    {note.title || "Untitled Note"}
+    <FontAwesomeIcon 
+      icon={faThumbtack} 
+      className={`pin-icon ${note.isPinned ? 'pinned' : ''}`}
+      onClick={(e) => {
+        e.stopPropagation();
+        togglePin(note.id);
+      }}
+    />
+  </strong>
+            <span className="note-date">
+              {new Date(note.dateOfLastUpdate).toLocaleDateString()} 
+              {new Date(note.dateOfLastUpdate).toLocaleTimeString()}
+            </span>
+            <p className="note-content">{note.content && note.content.substr(0, 30) + '...'}</p>
           </div>
-
-        </header>
-
-
-        <div className="app-sidebar-notes">
-
-          {filteredNotes.map((note) => (
-
-            <div key={note.id} className={`note-preview ${note.id === activeNote?.id ? 'active' : ''}`} onClick={() => setActiveNote(note)}>
-              
-              <div className="note-details">
-
-                <strong className="note-title">{note.title || "Untitled Note"}</strong>
-
-                <span className="note-date">{new Date(note.dateOfLastUpdate).toLocaleDateString()} {new Date(note.dateOfLastUpdate).toLocaleTimeString()}</span>
-
-                <p className="note-content">{note.content && note.content.substr(0, 30) + '...'}</p>
-
-              </div>
-
-              <button className="delete-note-btn" onClick={(e) => {e.stopPropagation(); onDeleteNote(note.id);}}>Delete</button>
-
-            </div>
-          ))}
+          <button className="delete-note-btn" 
+                  onClick={(e) => {e.stopPropagation(); onDeleteNote(note.id);}}>
+            Delete
+          </button>
         </div>
-
-      </aside>
-
-
-      <main className="note-display">
-        {activeNote ? (
-          <Note activeNote={activeNote} updateNote={updateNote} />
-        ) : (
-          <div className="no-active-note"></div>
-        )}
-      </main>
-
-
-
+      ))}
     </div>
+  </aside>
+
+  <main className="note-display">
+    {activeNote ? (
+      <Note activeNote={activeNote} updateNote={updateNote} />
+    ) : (
+      <div className="no-active-note">Select a note or create a new one.</div>
+    )}
+  </main>
+</div>
+
   );
 };
 

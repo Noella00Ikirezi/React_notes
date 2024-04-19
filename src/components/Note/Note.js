@@ -8,20 +8,20 @@ const Note = ({ activeNote, updateNote }) => {
     setNote(activeNote || { title: '', content: '', id: null });
   }, [activeNote]);
 
-  // Called when the save button is clicked
+ 
   const onSaveNote = () => {
     if(note.id) {
-      // Update the last updated date and save the note
+     
       updateNote({ ...note, dateOfLastUpdate: new Date().toISOString() });
     }
   };
 
-  // Update the note's title or content as the user types
+  
   const onEditField = (key, value) => {
     setNote({ ...note, [key]: value });
   };
 
-  if (!note) return <div className="no-active-note">No Note Selected</div>;
+  if (!note) return <div className="no-active-note">Select a Note</div>;
 
   return (
     <div className="note">
