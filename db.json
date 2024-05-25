@@ -4,7 +4,7 @@
       "id": "3178",
       "title": "Bienvenue dans Simplenote",
       "content": "Simplenote est un outil facile pour prendre des notes, créer des listes de choses à faire, capturer des idées, etc. Il vous suffit de l’ouvrir, d’entrer vos réflexions, et le tour est joué. Simplenote assurant gratuitement la synchronisation sur tous vos appareils, vous disposez de vos notes à tout moment.",
-      "dateOfLastUpdate": "2024-04-05T17:27:38.701Z",
+      "dateOfLastUpdate": "2024-04-19T21:30:12.769Z",
       "isPinned": false
     },
     {
@@ -12,21 +12,21 @@
       "title": "Markdown",
       "content": "Utilisez Markdown pour ajouter des éléments de style à vos notes. Sélectionnez « Markdown » dans les options de note pour activer Markdown sur cette note. Pour en savoir plus sur l’utilisation de Markdown, consultez https://simplenote.com/help/#markdown.",
       "dateOfLastUpdate": "2024-04-05T17:29:21.586Z",
-      "isPinned": true
+      "isPinned": false
     },
     {
       "id": "641f",
       "title": "Notes épinglées",
-      "content": "Vous consultez régulièrement des notes importantes ? Épinglez ces notes en haut de votre liste pour y accéder plus facilement.",
-      "dateOfLastUpdate": "2024-04-05T17:29:03.658Z",
-      "isPinned": true
+      "content": "Vous consultez régulièrement des notes importantes ? Épinglez ces notes en haut de votre liste pour y accéder plus facilement.\n\nYES",
+      "dateOfLastUpdate": "2024-04-19T21:29:26.865Z",
+      "isPinned": false
     },
     {
       "id": "492b",
       "title": "Tags",
       "content": "Ajoutez des tags à vos notes pour les organiser. Les tags fonctionnent à peu près de la même manière que les dossiers, à l’exception que vous pouvez ajouter autant de tags que vous le souhaitez à une note.",
       "dateOfLastUpdate": "2024-04-05T17:29:41.351Z",
-      "isPinned": true
+      "isPinned": false
     },
     {
       "id": "c334",

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Loader.css'; // Assurez-vous de créer un fichier Loader.css dans le même répertoire
+import './Loader.css'; 
 
 const Loader = () => (
   <div className="loader-container">
