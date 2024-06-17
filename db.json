@@ -5,7 +5,7 @@
       "title": "Bienvenue dans Simplenote",
       "content": "Simplenote est un outil facile pour prendre des notes, créer des listes de choses à faire, capturer des idées, etc. Il vous suffit de l’ouvrir, d’entrer vos réflexions, et le tour est joué. Simplenote assurant gratuitement la synchronisation sur tous vos appareils, vous disposez de vos notes à tout moment.",
       "dateOfLastUpdate": "2024-04-19T21:30:12.769Z",
-      "isPinned": false
+      "isPinned": true
     },
     {
       "id": "ec8b",
@@ -39,6 +39,12 @@
       "title": "Synchronisation",
       "content": "Il n’y a pas de bouton « Enregistrer », car toutes vos modifications sont automatiquement synchronisées et accessibles depuis n’importe quelle plateforme. Pour en savoir plus sur la synchronisation, consultez https://simplenote.com/help/#syncing.",
       "dateOfLastUpdate": "2024-04-05T17:30:23.763Z"
+    },
+    {
+      "id": "386a",
+      "title": "New Note",
+      "content": "",
+      "dateOfLastUpdate": "2024-06-17T19:20:34.147Z"
     }
   ]
 }
